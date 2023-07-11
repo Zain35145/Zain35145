@@ -1,0 +1,32 @@
+- 👋 Hi, I’m @Zain35145
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+Zain35145/Zain35145 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+public static int Solution(int D, string S)
+{
+    switch (S)
+    {
+        case "one":
+            return D * 1;
+        case "two":
+            return D * 2;
+        case "three":
+            return D * 3;
+        case "four":
+            return D * 4;
+        case "five":
+            return D * 5;
+        default:
+            return 0;  // Default case if the input string is not valid
+    }
+}
+
+// Example usage:
+int result = Solution(4, "two");
+Console.WriteLine(result);  // Output: 8
