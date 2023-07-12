@@ -1,0 +1,37 @@
+- 👋 Hi, I’m @Zain35145
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+Zain35145/Zain35145 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] numbers = { 5, 7, 2, 10, 4, 9, 6, 3 };
+
+        int largestEven = int.MinValue;
+        int largestOdd = int.MinValue;
+
+        foreach (int number in numbers)
+        {
+            if (number % 2 == 0 && number > largestEven)
+            {
+                largestEven = number;
+            }
+            else if (number % 2 != 0 && number > largestOdd)
+            {
+                largestOdd = number;
+            }
+        }
+
+        int sum = largestEven + largestOdd;
+        Console.WriteLine($"Sum of largest even and odd numbers: {sum}");
+    }
+}
