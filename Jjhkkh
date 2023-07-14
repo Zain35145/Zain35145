@@ -1,0 +1,25 @@
+- 👋 Hi, I’m @Zain35145
+- 👀 I’m interested in ...
+- 🌱 I’m currently learning ...
+- 💞️ I’m looking to collaborate on ...
+- 📫 How to reach me ...
+
+<!---
+Zain35145/Zain35145 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
+def remove_consecutive_letters(S):
+    if len(S) < 3:
+        return S
+
+    result = [S[0], S[1]]  # Initialize the result with the first two letters
+    count = 2  # Count of consecutive identical letters
+
+    for i in range(2, len(S)):
+        if S[i] == result[count - 1] and S[i] == result[count - 2]:
+            continue  # Skip adding the letter if three consecutive identical letters are found
+
+        result.append(S[i])
+        count += 1
+
+    return ''.join(result)
